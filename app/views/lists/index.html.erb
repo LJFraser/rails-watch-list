@@ -1,0 +1,17 @@
+<h1>Lists</h1>
+
+<div>
+  <% @lists.each do | list | %>
+
+      <ul>
+        <li><%= list.name %></li>
+            <%= link_to "details", list %>
+      </ul>
+  <% end %>
+</div>
+
+<%= link_to "➕ New list", new_list_path %>
+<p></p>
+<%= link_to "🎥 Movies Index", movies_path %>
+<p></p>
+<%= link_to "🔖 Bookmarks Index", bookmarks_path %>

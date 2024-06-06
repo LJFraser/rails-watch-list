@@ -1,0 +1,9 @@
+<h1>Movie <%= @movie.title %></h1>
+<%= @movie.overview %>
+<p></p>
+<%= @movie.poster_url %>
+<p></p>
+<h3>Rating: <%= @movie.rating %></h3>
+
+<%= link_to "🗒️ List Index", lists_path %>
+<%= link_to " | 🎥 Movies Index", movies_path %>

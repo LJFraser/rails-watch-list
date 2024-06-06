@@ -1,0 +1,14 @@
+<h1>Bookmarks Index</h1>
+
+<div>
+  <% @bookmarks.each do | bookmark | %>
+
+      <ul>
+        <li><%= bookmark.comment %></li>
+        <%= bookmark.movie_id %>
+            <%= link_to "details", bookmark %>
+      </ul>
+  <% end %>
+</div>
+
+<%= link_to "🗒️ List Index", lists_path %>
