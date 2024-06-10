@@ -1,14 +1,14 @@
-<h1>Add a movie to the list & a comment:</h1>
-
+<h1>Add a comment to a movie:</h1>
+<h3>Movie id: <%= a = params[:id] %></h3>
 <P><%= simple_form_for [@list, @bookmark] do |f| %>
+
   <%= f.association :movie%>
   <%= f.input :comment %>
   <%= f.submit %>
 <% end %>
 </p>
 
-<%= link_to "🗒️ List Index", lists_path %>
+<%= link_to "🗒️ List Index ", lists_path %><%= link_to "|  🔖 Bookmarks Index", bookmarks_path %>
 <p></p>
 <%= link_to "🎥 Movies Index", movies_path %>
 <p></p>
-<%= link_to "🔖 Bookmarks Index", bookmarks_path %>

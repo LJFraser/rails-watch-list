@@ -7,6 +7,7 @@
         <li><%= bookmark.comment %></li>
         <%= bookmark.movie_id %>
             <%= link_to "details", bookmark %>
+            <% button_to "Destroy comment?", @bookmark, method: :delete %>
       </ul>
   <% end %>
 </div>

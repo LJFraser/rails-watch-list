@@ -4,11 +4,11 @@ class BookmarksController < ApplicationController
   end
 
   def show
-     @bookmark = Bookmark.find(params[:id])
+    @bookmark = Bookmark.find(params[:id])
   end
 
   def create
-    @bookmark = Bookmark.new(list_params)
+    @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list = List.find(params[:list_id])
     if @bookmark.save
       redirect_to @bookmark.list, notice: 'Bookmark was successfully created'
@@ -27,6 +27,6 @@ def set_bookmark
   @bookmark = Bookmark.find(params[:id])
 end
 
-def list_params
+def bookmark_params
   params.require(:bookmark).permit(:comment, :movie_id)
 end
